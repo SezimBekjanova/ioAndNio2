@@ -16,7 +16,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 public class FileController {
     @Autowired
     private FileService fileService;
-    @PostMapping(value = "/upload", consumes =  "multipart/fotm-data")
+    @PostMapping(value = "/upload", consumes =  "multipart/form-data")
     public Response upload(@RequestPart MultipartFile file){
         String fileName =  fileService.storeFile(file);
         String downloadUri = ServletUriComponentsBuilder.fromCurrentContextPath()

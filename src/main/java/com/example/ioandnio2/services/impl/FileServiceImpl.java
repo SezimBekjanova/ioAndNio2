@@ -13,9 +13,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.UUID;
-
 @Service
-public class FileServiceImpl implements FileService {
+ public class FileServiceImpl implements FileService {
     private  final Path storagePath;
     public FileServiceImpl(FileStorageProperties fileStorageProperties){
         storagePath= Paths.get(fileStorageProperties.getUploadDir())
